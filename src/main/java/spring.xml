@@ -9,24 +9,9 @@
 	<aop:aspectj-autoproxy />
 
 	<bean id="stud1" class="com.model.Student">
-		<property name="name"  value="Jukebox" />
+		<property name="name"  value="Rimuru" />
 		<property name="rollNumber"  value="5" />
 	</bean>
-	<bean id="Spicejet" class="com.aspect.Spicejet">
-		<property name="name" value="Spicejet Airlines" />
-		<property name="Warn" value="Go To Gate 4 For Boarding" />
-	</bean>
-
-	<bean id="Spicejet1" class="com.aspect.Spicejet">
-		<property name="name" value="Spicejet Airlines" />
-		<property name="Warn" value="Go To Gate 4 For Boarding" />
-	</bean>
-
-
-	<bean id="Airline" class="com.aspect.Airline">
-		<property name="sp" ref="Spicejet" />
-		<property name="sp1" ref="Spicejet1" />
-	</bean>
 	
-	<bean class="com.aspect.Aspect1" />
+	<bean class="com.aspect.LoggingAspect" />
 </beans>

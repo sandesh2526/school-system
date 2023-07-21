@@ -10,7 +10,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 public class School {
 	private List<ClassOfStudents> classes;
 	
