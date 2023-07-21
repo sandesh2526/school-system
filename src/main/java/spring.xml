@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+				http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	<aop:aspectj-autoproxy />
+
+	<bean id="stud1" class="com.model.Student">
+		<property name="name"  value="Jukebox" />
+		<property name="rollNumber"  value="5" />
+	</bean>
+	<bean id="Spicejet" class="com.aspect.Spicejet">
+		<property name="name" value="Spicejet Airlines" />
+		<property name="Warn" value="Go To Gate 4 For Boarding" />
+	</bean>
+
+	<bean id="Spicejet1" class="com.aspect.Spicejet">
+		<property name="name" value="Spicejet Airlines" />
+		<property name="Warn" value="Go To Gate 4 For Boarding" />
+	</bean>
+
+
+	<bean id="Airline" class="com.aspect.Airline">
+		<property name="sp" ref="Spicejet" />
+		<property name="sp1" ref="Spicejet1" />
+	</bean>
+	
+	<bean class="com.aspect.Aspect1" />
+</beans>
