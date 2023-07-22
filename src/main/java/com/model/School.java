@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
@@ -15,5 +14,9 @@ public class School {
 	
 	public School() {
 		classes = new ArrayList<>();
+	}
+	
+	public void addClass(ClassOfStudents classOfStudents) {
+		classes.add(classOfStudents);
 	}
 }

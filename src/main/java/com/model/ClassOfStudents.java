@@ -16,10 +16,11 @@ public class ClassOfStudents {
 	private List<Student> studentsInClass;
 	private char className;
 	
-	void addStudent(Student student) {
+	public void addStudent(Student student) {
+		System.out.println(student);
 		studentsInClass.add(student);
 	}
-	
+
 	public ClassOfStudents(char nameOfClass) {
 		studentsInClass = new ArrayList<>();
 		this.className = nameOfClass;
